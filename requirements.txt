@@ -1,0 +1,3 @@
+dicord.py
+ayncio
+openpyxl
