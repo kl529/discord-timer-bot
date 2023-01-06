@@ -4,7 +4,10 @@ import math
 from datetime import datetime
 
 GOAL = {
-
+    'JW': 100,
+    'SM' : 100,
+    'KO' : 100,
+    'HM' : 100
 }
 
 # 파일 읽기. -> 이름 / 날짜 / 시작시간 / 종료시간 행이 추가 됨.
@@ -34,9 +37,10 @@ def check_status(ctx):
 def start_timer(ctx):
     semester = math.ceil(time.localtime().tm_mon / 3.0)
     author_name = ctx.message.author.name
-    now = time.localtime()
-    date = time.strftime('%Y%m%d', now)
-    start_time = time.strftime('%Y-%m-%d %I:%M:%S', now)
+    # now = time.localtime()
+    now = datetime.now(timezone('Asia/Seoul'))
+    date = now.strftime('%Y%m%d')
+    start_time = now.strftime('%Y-%m-%d %I:%M:%S')
 
 
     wb = op.load_workbook(r"result.xlsx") #Workbook 객체 생성
@@ -53,8 +57,9 @@ def end_timer(ctx):
     wb = op.load_workbook(r"result.xlsx") #Workbook 객체 생성
     ws = wb.active #활성화 된 시트 객체 생성
 
-    now = time.localtime()
-    end_time = time.strftime('%Y-%m-%d %I:%M:%S', now)
+    # now = time.localtime()
+    now = datetime.now(timezone('Asia/Seoul'))
+    end_time = now.strftime('%Y-%m-%d %I:%M:%S')
 
     for row in ws.rows:
         if row[1].value == ctx.message.author.name and row[4].value is None: # 시작을 했다면
