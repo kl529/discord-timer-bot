@@ -1,0 +1,5 @@
+[2023-01-06 06:17:32] [INFO    ] discord.client: logging in using static token
+[2023-01-06 06:17:33] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f148ea63843c7ec46a6d2a71f3a7b73b).
+We have loggedd in as study_timer_bot#8232
+[2023-01-06 06:17:44] [INFO    ] discord.client: logging in using static token
+[2023-01-06 06:17:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f555aff8c495c2ecc21ec9d944448c51).
