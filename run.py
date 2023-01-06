@@ -1,9 +1,10 @@
 import asyncio, discord
 from discord.ext import commands, tasks
 import time_check
+import config
 
 bot = commands.Bot(command_prefix="/", intents=discord.Intents.all())
-token = 'MTA1Nzk3MDg2Mzg2NzE4NzI4MA.GSQXxd.UAM_9BDhnfLwJ3uSiopTpDNdzqBfQOl6NoFZ3s'
+token = config.DISCORD_TOKEN
 
 @bot.event
 async def on_ready():
