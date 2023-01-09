@@ -83,11 +83,15 @@ def setting():
 
     wb.save(r"result.xlsx") #결과 엑셀파일 저장
 
-def time_stamp_to_time(ts):
+def time_stamp_to_time(ts, seperate=False):
     hour = 0
     minute = ts // 60
     if minute >= 60:
         hour = minute // 60
         minute-= 60 * hour
     second = ts % 60
+
+    if seperate:
+        return (int(hour), int(minute), int(second))
+
     return f'{int(hour)}시간 {int(minute)}분 {int(second)}초'

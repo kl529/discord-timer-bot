@@ -63,8 +63,13 @@ async def check(ctx):
     one_day_goal = GOAL['First']
     total_time_goal, today_time_goal, week_time_goal = one_day_goal * 10, one_day_goal, one_day_goal * 7
 
-    await ctx.reply(f"{ctx.message.author.name}님 이번 학기 목표 {total_time_goal}시간 중 {time_check.time_stamp_to_time(total_time)}시간 공부 했습니다. ({ (int(total_time/60)/total_time_goal)*100 }%)🔥")
-    await ctx.reply(f"{ctx.message.author.name}님 오늘 목표 {today_time_goal}시간 중 {time_check.time_stamp_to_time(today_time)}시간 공부 했습니다. ({ (int(today_time/60)/today_time_goal)*100 }%)🔥")
+    await ctx.reply(f"{ctx.message.author.name}님 이번 학기 목표 {total_time_goal}시간 중 \
+        {time_check.time_stamp_to_time(total_time)} 공부 했습니다. \
+        ({ (time_check.time_stamp_to_time(total_time,seperate=True)[0]/total_time_goal)*100 }%)🔥")
+
+    await ctx.reply(f"{ctx.message.author.name}님 오늘 목표 {today_time_goal}시간 중 \
+        {time_check.time_stamp_to_time(today_time)} 공부 했습니다. \
+        ({ (time_check.time_stamp_to_time(today_time,seperate=True)[0]/today_time_goal)*100 }%)🔥")
 
 
 # 실행
