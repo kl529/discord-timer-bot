@@ -3,3 +3,44 @@
 We have loggedd in as study_timer_bot#8232
 [2023-01-06 06:17:44] [INFO    ] discord.client: logging in using static token
 [2023-01-06 06:17:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f555aff8c495c2ecc21ec9d944448c51).
+[2023-01-06 09:27:03] [INFO    ] discord.client: logging in using static token
+[2023-01-06 09:27:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4247ebec6cbe6ae00fe7c93c391a7903).
+[2023-01-06 11:39:45] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 14:06:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 14:32:18] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 15:12:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 16:26:26] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 16:56:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 19:36:09] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 20:26:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 21:02:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 21:36:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-06 22:57:17] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 02:48:04] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 03:20:46] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 06:50:26] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 07:13:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 10:30:20] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 14:05:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 16:27:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 19:38:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 20:00:14] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 22:00:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-07 23:16:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-08 02:29:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-08 05:27:55] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-08 09:21:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-08 11:29:40] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-08 14:54:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-08 18:29:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-08 20:46:24] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-08 21:12:20] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-09 00:39:46] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4247ebec6cbe6ae00fe7c93c391a7903.
+[2023-01-09 01:23:06] [INFO    ] discord.client: logging in using static token
+[2023-01-09 01:23:07] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: eac617bc4f1d1cd481b6c6f47929b693).
+[2023-01-09 02:42:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session eac617bc4f1d1cd481b6c6f47929b693.
+[2023-01-09 05:41:35] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session eac617bc4f1d1cd481b6c6f47929b693.
+[2023-01-09 06:38:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session eac617bc4f1d1cd481b6c6f47929b693.
+[2023-01-09 06:53:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session eac617bc4f1d1cd481b6c6f47929b693.
+[2023-01-09 09:33:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session eac617bc4f1d1cd481b6c6f47929b693.
+[2023-01-09 10:40:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session eac617bc4f1d1cd481b6c6f47929b693.

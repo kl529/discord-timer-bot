@@ -2,6 +2,7 @@ import  openpyxl  as  op
 import time
 import math
 from datetime import datetime
+from pytz import timezone
 
 GOAL = {
     'JW': 100,
