@@ -3,6 +3,11 @@ from discord.ext import commands, tasks
 import time_check
 import config
 
+#목표 공부 시간
+GOAL = {
+    'First' : 10
+}
+
 #prefix 및 토큰 설정
 bot = commands.Bot(command_prefix="/", intents=discord.Intents.all())
 token = config.DISCORD_TOKEN
@@ -54,8 +59,12 @@ async def end(ctx):
 @bot.command()
 async def check(ctx):
     total_time, today_time, week_time = time_check.check_status(ctx)
-    await ctx.reply(f"{ctx.message.author.name}님 이번 학기에 총 {total_time} 공부를 했습니다.🔥")
-    await ctx.reply(f"{ctx.message.author.name}님 오늘 총 {today_time} 공부를 했습니다.🔥")
+
+    one_day_goal = GOAL['First']
+    total_time_goal, today_time_goal, week_time_goal = one_day_goal * 10, one_day_goal, one_day_goal * 7
+
+    await ctx.reply(f"{ctx.message.author.name}님 이번 학기 목표 {total_time_goal}시간 중 {time_check.time_stamp_to_time(total_time)}시간 공부 했습니다. ({ (int(total_time/60)/total_time_goal)*100 }%)🔥")
+    await ctx.reply(f"{ctx.message.author.name}님 오늘 목표 {today_time_goal}시간 중 {time_check.time_stamp_to_time(today_time)}시간 공부 했습니다. ({ (int(today_time/60)/today_time_goal)*100 }%)🔥")
 
 
 # 실행

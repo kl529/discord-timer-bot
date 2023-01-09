@@ -5,10 +5,10 @@ from datetime import datetime
 from pytz import timezone
 
 GOAL = {
-    'JW': 100,
-    'SM' : 100,
-    'KO' : 100,
-    'HM' : 100
+    'JW': 10,
+    'SM' : 10,
+    'KO' : 10,
+    'HM' : 10
 }
 
 # 파일 읽기. -> 이름 / 날짜 / 시작시간 / 종료시간 행이 추가 됨.
@@ -32,7 +32,7 @@ def check_status(ctx):
             if row[2].value == time.strftime('%Y%m%d', time.localtime()):
                 today_time += row[5].value
 
-    return time_stamp_to_time(total_time), time_stamp_to_time(today_time), time_stamp_to_time(week_time)
+    return total_time, today_time, week_time
 
 # 2. 시작
 def start_timer(ctx):
