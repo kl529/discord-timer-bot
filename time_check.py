@@ -65,7 +65,8 @@ def end_timer(ctx):
     for row in ws.rows:
         if row[1].value == ctx.message.author.name and row[4].value is None: # 시작을 했다면
             row[4].value = end_time #종료를 찍고 시간 계산 후 끝내기
-            gap = time.mktime(datetime.strptime(end_time, '%Y-%m-%d %H:%M:%S').timetuple()) - time.mktime(datetime.strptime(row[3].value, '%Y-%m-%d %H:%M:%S').timetuple())
+            # gap = time.mktime(datetime.strptime(end_time, '%Y-%m-%d %H:%M:%S').timetuple()) - time.mktime(datetime.strptime(row[3].value, '%Y-%m-%d %H:%M:%S').timetuple())
+            gap = (datetime.strptime(end_time, '%Y-%m-%d %H:%M:%S') - datetime.strptime(row[3].value, '%Y-%m-%d %H:%M:%S')).seconds
             row[5].value = gap
             wb.save(r"result.xlsx")
             return end_time, time_stamp_to_time(gap)
@@ -84,14 +85,13 @@ def setting():
     wb.save(r"result.xlsx") #결과 엑셀파일 저장
 
 def time_stamp_to_time(ts, seperate=False):
-    hour = 0
+    hour = ts // 3600
+    ts -= hour*3600
     minute = ts // 60
-    if minute >= 60:
-        hour = minute // 60
-        minute-= 60 * hour
-    second = ts % 60
+    second -= minute*60 
 
     if seperate:
         return (int(hour), int(minute), int(second))
 
     return f'{int(hour)}시간 {int(minute)}분 {int(second)}초'
+
