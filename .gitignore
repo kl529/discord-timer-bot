@@ -2,6 +2,6 @@ config.py
 *.pyc
 __pycache__/*
 *.pem
-*.xlsx
+# *.xlsx
 nohup.out
 test.py
