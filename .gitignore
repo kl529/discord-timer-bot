@@ -3,3 +3,5 @@ config.py
 __pycache__/*
 *.pem
 *.xlsx
+nohup.out
+test.py

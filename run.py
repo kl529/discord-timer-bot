@@ -34,7 +34,8 @@ async def on_command_error(ctx, error):
 # 엑셀 기본 세팅
 @bot.command()
 async def setting(ctx):
-    time_check.start_timer()
+    time_check.setting()
+    await ctx.send("fin")
 
 
 # 공부시간 체크 시작
@@ -64,7 +65,6 @@ async def check(ctx):
     total_time_goal, today_time_goal, week_time_goal = one_day_goal * 10, one_day_goal, one_day_goal * 7
 
     await ctx.reply(f"{ctx.message.author.name}님 이번 학기 목표 {total_time_goal}시간 중 {time_check.time_stamp_to_time(total_time)} 공부 했습니다. ({ (time_check.time_stamp_to_time(total_time,seperate=True)[0]/total_time_goal)*100 }%)🔥")
-    await ctx.reply(f"{ctx.message.author.name}님 오늘 목표 {today_time_goal}시간 중 {time_check.time_stamp_to_time(today_time)} 공부 했습니다. ({ (time_check.time_stamp_to_time(today_time,seperate=True)[0]/today_time_goal)*100 }%)🔥")
 
 
 # 실행
