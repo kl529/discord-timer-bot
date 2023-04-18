@@ -67,5 +67,10 @@ async def check(ctx):
     await ctx.reply(f"{ctx.message.author.name}님 이번 학기 목표 {total_time_goal}시간 중 {time_check.time_stamp_to_time(total_time)} 공부 했습니다. ({ (time_check.time_stamp_to_time(total_time,seperate=True)[0]/total_time_goal)*100 }%)🔥")
 
 
+@bot.command()
+async def semester_finish(ctx):
+    message = time_check.calculate_timer()
+    await ctx.send(message)
+
 # 실행
 bot.run(token)

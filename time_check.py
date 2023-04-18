@@ -84,7 +84,7 @@ def setting():
     wb.save(r"result.xlsx") #결과 엑셀파일 저장
 
 
-# timestamp를 시간 / 분 / 초로 변환하는 함수
+# second를 시간 / 분 / 초로 변환하는 함수
 def time_stamp_to_time(ts, seperate=False):
     hour = ts // 3600
     ts -= hour*3600
@@ -101,3 +101,34 @@ def time_stamp_to_time(ts, seperate=False):
 
     return f'{int(hour)}시간 {int(minute)}분 {int(second)}초'
 
+
+# 학기가 끝날때, 모든 공부시간을 정리하는 함수
+def calculate_timer():
+    wb = op.load_workbook(r"result.xlsx") #Workbook 객체 생성
+    ws = wb.active #활성화 된 시트 객체 생성
+
+    semester = math.ceil(time.localtime().tm_mon / 3.0) #학기 체크
+
+    result_dic = {'Karice' : 0, 'god_life': 0, 'kwanok': 0, '김선만': 0}
+
+    for row in ws.rows:
+        semester_input = row[0].value # 학기
+        nickname_input = row[1].value # 닉네임
+        date_input = row[2].value #시작 날짜
+        start_time_input = row[3].value #시작 시간
+        end_time_input = row[4].value #종료시간
+        study_time = row[5].value #공부 시간
+
+        if semester_input == semester and study_time:
+            result_dic[nickname_input] += study_time
+            
+    result_dic = dict(sorted(result_dic.items(), key=(lambda x:x[1]), reverse=True)) # 정렬
+    result_dic = [{'name' : item, 'time' : time_stamp_to_time(result_dic[item]), 'pass' : ('🎉' if result_dic[item] >= 360000 else '❌')} for item in result_dic] # second를 시간으로 변경
+
+    message = f"{semester} 학기도 모두 고생하셨습니다. \n \n\
+🥇 1등 - {result_dic[0]['name']} : {result_dic[0]['time']} ( {result_dic[0]['pass']} ) \n\n \
+🥈 2등 - {result_dic[1]['name']} : {result_dic[1]['time']} ( {result_dic[1]['pass']} ) \n\n \
+🥉 3등 - {result_dic[2]['name']} : {result_dic[2]['time']} ( {result_dic[2]['pass']} ) \n\n \
+🏆 4등 - {result_dic[3]['name']} : {result_dic[3]['time']} ( {result_dic[3]['pass']} )"
+
+    return message
